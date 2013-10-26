@@ -4,13 +4,34 @@
         <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+                <style>
+				    #slides {
+				      display:none;
+				    }
+				  </style>
+				<script src="js/jquery-1.8.2.min.js"></script>
+        		<script src="js/jquery.slides.min.js"></script>
         </head>
         <body>
               <button id="hello">Hello</button>
+              
+              <div id="slides">
+			    <img src="img/slide1.png">
+			    <img src="img/slide2.png">
+			    <img src="img/slide3.png">
+			    <img src="img/slide4.png">
+			  </div>
         </body>
-        <script src="js/zepto.min.js"></script>
+        
         <script>
+        	$(function(){
+		      $("#slides").slidesjs({
+		        width: 960,
+		        height: 400
+		      });
+		    });
+        
+        	
         	$('#hello').click(function(){
         		alert("Hello World!");
         	})
