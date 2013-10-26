@@ -143,7 +143,7 @@
 		    function timerIncrement() {
 			    idleTime = idleTime + 1;
 			    $("#timeout").html('Idle time:'+idleTime+' seconds' );
-			    if(idleTime>30){
+			    if(idleTime>10){
 			    	idleTime = 0;
 					$(".flexslider").flexslider(0);
 			    }
